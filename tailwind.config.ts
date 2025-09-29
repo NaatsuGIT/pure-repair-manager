@@ -22,10 +22,12 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          hover: "hsl(var(--primary-hover))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          hover: "hsl(var(--secondary-hover))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -46,6 +48,16 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        status: {
+          pending: "hsl(var(--status-pending))",
+          "pending-foreground": "hsl(var(--status-pending-foreground))",
+          progress: "hsl(var(--status-progress))",
+          "progress-foreground": "hsl(var(--status-progress-foreground))",
+          ready: "hsl(var(--status-ready))",
+          "ready-foreground": "hsl(var(--status-ready-foreground))",
+          delivered: "hsl(var(--status-delivered))",
+          "delivered-foreground": "hsl(var(--status-delivered-foreground))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
