@@ -72,40 +72,40 @@ export const clientes: Cliente[] = [
   {
     id: '1',
     nombre: 'Juan Pérez',
-    telefono: '+34 600 123 456',
+    telefono: '+54 11 4567-8901',
     email: 'juan.perez@email.com',
-    direccion: 'Calle Mayor, 123, Madrid'
+    direccion: 'Av. Corrientes 1234, Buenos Aires'
   },
   {
     id: '2',
     nombre: 'María García',
-    telefono: '+34 600 234 567',
+    telefono: '+54 11 2345-6789',
     email: 'maria.garcia@email.com',
-    direccion: 'Avenida Valencia, 45, Barcelona'
+    direccion: 'Calle San Martín 567, Córdoba'
   },
   {
     id: '3',
     nombre: 'Carlos López',
-    telefono: '+34 600 345 678',
+    telefono: '+54 351 456-7890',
     email: 'carlos.lopez@email.com',
-    direccion: 'Plaza España, 78, Sevilla'
+    direccion: 'Av. Libertador 890, Rosario'
   }
 ];
 
 export const proveedores: Proveedor[] = [
   {
     id: '1',
-    nombre: 'TecnoPartes SL',
-    telefono: '+34 900 111 222',
-    email: 'ventas@tecnopartes.com',
-    direccion: 'Polígono Industrial, 12, Madrid'
+    nombre: 'TecnoPartes Argentina',
+    telefono: '+54 11 5555-1111',
+    email: 'ventas@tecnopartes.com.ar',
+    direccion: 'Parque Industrial, Lote 12, Buenos Aires'
   },
   {
     id: '2',
     nombre: 'RepuestosMax',
-    telefono: '+34 900 333 444',
-    email: 'pedidos@repuestosmax.com',
-    direccion: 'Calle Industria, 89, Valencia'
+    telefono: '+54 341 444-3333',
+    email: 'pedidos@repuestosmax.com.ar',
+    direccion: 'Calle Industria 89, Rosario'
   }
 ];
 
@@ -116,7 +116,7 @@ export const repuestos: Repuesto[] = [
     categoria: 'Pantallas',
     stock: 15,
     precio: 89.99,
-    proveedor: 'TecnoPartes SL'
+    proveedor: 'TecnoPartes Argentina'
   },
   {
     id: '2',
@@ -132,7 +132,7 @@ export const repuestos: Repuesto[] = [
     categoria: 'Conectores',
     stock: 25,
     precio: 12.99,
-    proveedor: 'TecnoPartes SL'
+    proveedor: 'TecnoPartes Argentina'
   },
   {
     id: '4',

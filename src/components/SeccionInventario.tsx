@@ -199,7 +199,7 @@ const SeccionInventario = () => {
                         {stockStatus.label}
                       </Badge>
                     </TableCell>
-                    <TableCell>€{repuesto.precio.toFixed(2)}</TableCell>
+                    <TableCell>${repuesto.precio.toFixed(2)}</TableCell>
                     <TableCell>{repuesto.proveedor}</TableCell>
                     <TableCell>
                       <div className="flex space-x-2">
@@ -267,7 +267,7 @@ const SeccionInventario = () => {
               />
             </div>
             <div>
-              <Label htmlFor="precio">Precio (€)</Label>
+              <Label htmlFor="precio">Precio ($)</Label>
               <Input
                 id="precio"
                 type="number"

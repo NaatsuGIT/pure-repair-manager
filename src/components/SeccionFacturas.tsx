@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Plus, Eye, Search, FileText, Euro } from 'lucide-react';
+import { Plus, Eye, Search, FileText, DollarSign } from 'lucide-react';
 import { facturas, proveedores, repuestos } from '@/data/mockData';
 import type { Factura } from '@/data/mockData';
 import ModalContainer from './modals/ModalContainer';
@@ -131,13 +131,13 @@ const SeccionFacturas = () => {
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium flex items-center">
-              <Euro className="h-4 w-4 mr-2 text-status-ready" />
+              <DollarSign className="h-4 w-4 mr-2 text-status-ready" />
               Gasto Total
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">
-              €{facturas.reduce((total, f) => total + f.total, 0).toFixed(2)}
+              ${facturas.reduce((total, f) => total + f.total, 0).toFixed(2)}
             </div>
           </CardContent>
         </Card>
@@ -151,7 +151,7 @@ const SeccionFacturas = () => {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">
-              €{facturas.length > 0 ? (facturas.reduce((total, f) => total + f.total, 0) / facturas.length).toFixed(2) : '0.00'}
+              ${facturas.length > 0 ? (facturas.reduce((total, f) => total + f.total, 0) / facturas.length).toFixed(2) : '0.00'}
             </div>
           </CardContent>
         </Card>
@@ -198,7 +198,7 @@ const SeccionFacturas = () => {
                       {factura.items.length} items
                     </Badge>
                   </TableCell>
-                  <TableCell className="font-medium">€{factura.total.toFixed(2)}</TableCell>
+                  <TableCell className="font-medium">${factura.total.toFixed(2)}</TableCell>
                   <TableCell>
                     <Button
                       variant="ghost"
@@ -327,7 +327,7 @@ const SeccionFacturas = () => {
 
               <div className="flex justify-end mt-4">
                 <div className="text-lg font-bold">
-                  Total: €{calcularTotal().toFixed(2)}
+                  Total: ${calcularTotal().toFixed(2)}
                 </div>
               </div>
             </div>
@@ -371,8 +371,8 @@ const SeccionFacturas = () => {
                       <TableRow key={index}>
                         <TableCell>{getRepuestoNombre(item.repuestoId)}</TableCell>
                         <TableCell>{item.cantidad}</TableCell>
-                        <TableCell>€{item.precioUnitario.toFixed(2)}</TableCell>
-                        <TableCell>€{(item.cantidad * item.precioUnitario).toFixed(2)}</TableCell>
+                        <TableCell>${item.precioUnitario.toFixed(2)}</TableCell>
+                        <TableCell>${(item.cantidad * item.precioUnitario).toFixed(2)}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>
@@ -381,7 +381,7 @@ const SeccionFacturas = () => {
 
               <div className="flex justify-between items-center pt-4 border-t">
                 <span className="text-lg font-bold">Total:</span>
-                <span className="text-2xl font-bold">€{facturaSeleccionada.total.toFixed(2)}</span>
+                <span className="text-2xl font-bold">${facturaSeleccionada.total.toFixed(2)}</span>
               </div>
             </div>
           )

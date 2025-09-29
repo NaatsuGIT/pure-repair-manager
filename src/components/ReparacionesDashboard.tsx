@@ -225,7 +225,7 @@ const ReparacionesDashboard = ({ onOpenModal }: ReparacionesDashboardProps) => {
                     <div className="text-sm">{reparacion.fechaEstimada}</div>
                   </TableCell>
                   <TableCell>
-                    <div className="font-medium">€{reparacion.precioTotal.toFixed(2)}</div>
+                    <div className="font-medium">${reparacion.precioTotal.toFixed(2)}</div>
                   </TableCell>
                   <TableCell>
                     <div className="flex space-x-1">
